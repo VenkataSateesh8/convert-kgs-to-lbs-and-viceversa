@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <center>
-      <title>Multi Unit Converter</title>
-      <style>
-        body { font-family: Arial; padding: 20px; }
-        .converter { margin-bottom: 30px; }
-        label { display: block; margin: 10px 0 5px; }
-      </style>
-    </center>
+  <title>Multi Unit Converter</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <center>
-    <h1>Multi Unit Converter</h1>
+  <h1>Multi Unit Converter</h1>
 
-    <div class="converter">
-      <h2>Weight: Kilograms to Pounds</h2>
-      <label for="kg">Kilograms (kg):</label>
-      <input type="number" id="kg" oninput="convertKgToLbs()">
-      <p><strong>Pounds (lbs):</strong> <span id="lbsOutput">0</span></p>
-    </div>
+  <div class="converter">
+    <h2>Weight: Kilograms to Pounds</h2>
+    <label for="kg">Kilograms (kg):</label>
+    <input type="number" id="kg" oninput="convertKgToLbs()">
+    <p><strong>Pounds (lbs):</strong> <span id="lbsOutput">0</span></p>
+  </div>
 
-    <script>
-      function convertKgToLbs() {
-        const kg = parseFloat(document.getElementById("kg").value);
-        const lbs = kg * 2.20462;
-        document.getElementById("lbsOutput").innerText = isNaN(lbs) ? 0 : lbs.toFixed(2);
-      }
-    </script>
-  </center>
+  <div class="converter">
+    <h2>Length: Centimeters to Inches</h2>
+    <label for="cm">Centimeters (cm):</label>
+    <input type="number" id="cm" oninput="convertCmToInch()">
+    <p><strong>Inches (in):</strong> <span id="inchOutput">0</span></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function convertKgToLbs() {
+      const kg = parseFloat(document.getElementById("kg").value);
+      const lbs = kg * 2.20462;
+      document.getElementById("lbsOutput").innerText = isNaN(lbs) ? 0 : lbs.toFixed(2);
+    }
+  </script>
 </body>
 </html>
